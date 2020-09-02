@@ -1,0 +1,46 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * animate plugin for Craft CMS 3.x
+ *
+ * animate index.twig
+ *
+ * @author    Tim Strawbridge
+ * @copyright Copyright (c) 2020 Tim Strawbridge
+ * @link      swdevteam.com
+ * @package   Animate
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("swdevelopment\\animate\\assetbundles\\animate\\AnimateAsset") %}
+{% do view.registerAssetBundle("swdevelopment\\animate\\assetbundles\\animatecpsection\\AnimateCPSectionAsset") %}
+
+{# Link for the ? icon at the bottom of the page #}
+{% set docsUrl = "https://github.com/sw-development-services/animate-plugin/blob/master/README.md" %}
+
+{# The title of this CP section #}
+{% set title = "animate" %}
+
+{# The URL to this plugin's base CP section #}
+{% set pluginCpUrl = url('animate') %}
+
+{# Get a URL to an image in our AssetBundle #}
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@swdevelopment/animate/assetbundles/animatecpsection/dist', true) ~ '/img/Animate-icon.svg' %}
+
+{# Content that should appear in the page header#}
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('animate') }}</a>
+    </div>
+{% endset %}
+
+{# The content of the CP Section#}
+{% set content %}
+    <h2>{{ "Animate CP Section body goes here"|t('animate') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}

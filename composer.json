@@ -1,0 +1,46 @@
+{
+    "name": "swdevelopment/animate",
+    "description": "This will animate elements using AOS.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "animate"
+    ],
+    "support": {
+        "docs": "https://github.com/sw-development-services/animate-plugin/blob/master/README.md",
+        "issues": "https://github.com/sw-development-services/animate-plugin/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tim Strawbridge",
+            "homepage": "https://swdevteam.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "require-dev": {
+      "craftcms/cms": "^3.2.0",
+      "codeception/codeception": "^3.0",
+      "vlucas/phpdotenv": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "swdevelopment\\animate\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Animate",
+        "handle": "animate",
+        "developer": "Tim Strawbridge",
+        "developerUrl": "https://swdevteam.com",
+        "documentationUrl": "https://github.com/sw-development-services/animate-plugin/blob/master/README.md",
+        "changelogUrl": "https://github.com/sw-development-services/animate-plugin/master/CHANGELOG.md",
+        "class": "swdevelopment\\animate\\Animate"
+    }
+}

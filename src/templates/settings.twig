@@ -1,0 +1,136 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * animate plugin for Craft CMS 3.x
+ *
+ * animate Settings.twig
+ *
+ * @author    Tim Strawbridge
+ * @copyright Copyright (c) 2020 Tim Strawbridge
+ * @link      swdevteam.com
+ * @package   Animate
+ * @since     1.0.0
+ */
+#}
+
+{% do view.registerAssetBundle("swdevelopment\\animate\\assetbundles\\animatecpsection\\AnimateCPSectionAsset") %}
+
+{% import '_includes/forms' as forms %}
+
+{% set title = 'Animate Settings' %}
+
+{% block content %}
+
+    {{ forms.lightswitchField(
+      {
+        name: 'activateAnimate',
+        label: 'Activate the Animate library?'|t('animate'),
+        instructions: 'If enabled, the Animate library will load and be placed in the HEAD section.'|t('animate'),
+        on: (settings.activateAnimate ?? true),
+      })
+    }}
+
+    {#
+    {{ forms.lightswitchField({
+        name: 'useOnEveryElement',
+        label: 'Use Animate on every element?'|t('animate'),
+        instructions: 'If enabled, the Animate library will be visible to use on every element.'|t('animate'),
+        on: (settings.useOnEveryElement ?? true),
+    }) }}
+    #}
+
+    {{ forms.lightswitchField({
+        name: 'useCDN',
+        label: 'Use CDN?'|t('animate'),
+        instructions: 'If enabled, the Animate library load from a CDN.'|t('animate'),
+        on: (settings.useCDN ?? true),
+    }) }}
+
+
+    {{ forms.lightswitchField({
+        name: 'useDefaultSettings',
+        label: 'Use Default Settings?'|t('animate'),
+        instructions: 'If enabled, the Animate library load only the default settings.'|t('animate'),
+        on: (settings.useDefaultSettings ?? true),
+    }) }}
+
+    {% if settings.useDefaultSettings == false %}
+
+      <div class="parent">
+
+        <div class="centered-text">
+          <h2>Animation Settings</h2>
+        </div>
+
+        <div class="cols">
+
+          <div class="col-50 l">
+            {{ forms.textField({
+              name:'offset',
+              label:'Set Animates offset setting'|t('animate'),
+              instructions:'Use a value from 1 to 1000 in milli seconds (ms)'|t('animate'),
+              value: ( settings.offset ? settings.offset : settings.defaultSettings.offset ),
+            }) }}
+          </div>
+
+          <div class="col-50 r">
+            {{ forms.textField({
+              name:'delay',
+              label:'Set Animates delay setting'|t('animate'),
+              instructions:'Use a value from 1 to 1000 in milli seconds (ms)'|t('animate'),
+              value: ( settings.delay ? settings.delay : settings.defaultSettings.delay ),
+            }) }}
+          </div>
+
+        </div>
+
+        <div class="cols">
+
+          <div class="col-50 l">
+            {{ forms.textField({
+              name:'duration',
+              label:'Set Animates duration setting'|t('animate'),
+              instructions:'Use a value from 1 to 1000 in milli seconds (ms)'|t('animate'),
+              value: ( settings.duration ? settings.duration : settings.defaultSettings.duration ),
+            }) }}
+          </div>
+
+          <div class="col-50 r">
+
+            {{ forms.selectField({
+              name:'easing[match]',
+              class:'',
+              label:'Set Animates easing setting'|t('animate'),
+              instructions:'Select a value that you want to use.'|t('animate'),
+              value: settings.defaultSettings.easing,
+              options: settings.easingOptions,
+
+            }) }}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    {% endif %}
+
+    <div class="parent">
+      <div class="centered-text">
+        <h2>Animation Options</h2>
+      </div>
+      <div class="cols">
+        <div class="col-50">
+          <ul>
+            {% for item in settings.animateOptions  %}
+                <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+/**
+ * animate plugin for Craft CMS
+ *
+ * Animate Field CSS
+ *
+ * @author    Tim Strawbridge
+ * @copyright Copyright (c) 2020 Tim Strawbridge
+ * @link      swdevteam.com
+ * @package   Animate
+ * @since     1.0.0
+ */
+
+.cols{
+  display: flex;
+  position: relative;
+  padding: 25px 0px;
+}
+
+.col-50{
+  width: 50%;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.col-33{
+  width: 33.3333%;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.l{
+  padding-left: 0px !important;
+}
+
+.r{
+  padding-right: 0px !important;
+}
+
+.centered-text{
+  text-align: center;
+  padding: 25px 25px;
+}
