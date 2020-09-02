@@ -212,8 +212,6 @@ class Animate extends Plugin
       // if we are in production, lets load only from the CDN
       if($environment == "production"){
         $this->useCDN = true;
-        // https://unpkg.com/aos@2.3.1/dist/aos.js
-        // https://unpkg.com/aos@2.3.1/dist/aos.css
       }
 
       $view->registerAssetBundle(AnimateAsset::class);
