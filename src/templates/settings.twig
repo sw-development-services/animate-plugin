@@ -120,13 +120,91 @@
         <h2>Animation Options</h2>
       </div>
       <div class="cols">
-        <div class="col-50">
-          <ul>
-            {% for item in settings.animateOptions  %}
-                <li>{{ item }}</li>
+        <div class="col-25">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <td>Animation Effect</td>
+                <td>Usage</td>
+              </tr>
+            </thead>
+            <tbody>
+
+            {% for item in settings.fades %}
+                <tr>
+                  <td>{{ item.effect }}</td><td>{{ item.usage }}</td>
+                </tr>
             {% endfor %}
-          </ul>
+            </tbody>
+          </table>
+
         </div>
+
+        <div class="col-25">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <td>Animation Effect</td>
+                <td>Usage</td>
+              </tr>
+            </thead>
+            <tbody>
+
+            {% for item in settings.flips %}
+                <tr>
+                  <td>{{ item.effect }}</td><td>{{ item.usage }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="col-25">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <td>Animation Effect</td>
+                <td>Usage</td>
+              </tr>
+            </thead>
+            <tbody>
+
+            {% for item in settings.slides %}
+                <tr>
+                  <td>{{ item.effect }}</td><td>{{ item.usage }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="col-25">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <td>Animation Effect</td>
+                <td>Usage</td>
+              </tr>
+            </thead>
+            <tbody>
+
+            {% for item in settings.zooms %}
+                <tr>
+                  <td>{{ item.effect }}</td><td>{{ item.usage }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+
+        </div>
+
+
       </div>
     </div>
 

@@ -28,6 +28,12 @@
   padding-left: 25px;
 }
 
+.col-25{
+  width: 25%;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
 .l{
   padding-left: 0px !important;
 }
@@ -39,4 +45,23 @@
 .centered-text{
   text-align: center;
   padding: 25px 25px;
+}
+
+thead tr{
+  font-weight:bold;
+  background-color: #cecece;
+}
+
+thead td{
+  padding:10px;
+}
+
+
+tbody td{
+  border: solid 1px #c4c4c4;
+  padding:10px;
+}
+
+td{
+
 }

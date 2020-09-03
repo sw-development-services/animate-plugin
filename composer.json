@@ -1,14 +1,16 @@
 {
     "name": "swdevelopment/animate",
-    "description": "This will animate elements using AOS.",
+    "description": "This will animate HTML elements using the AOS library.",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "craft",
         "cms",
         "craftcms",
         "craft-plugin",
-        "animate"
+        "animate",
+        "animation effects",
+        "HTML animation"
     ],
     "support": {
         "docs": "https://github.com/sw-development-services/animate-plugin/blob/master/README.md",

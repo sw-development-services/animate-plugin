@@ -1,8 +1,9 @@
 # Animate plugin for Craft CMS 3.x
 
-This will animate elements using AOS
+This will animate elements using AOS from https://github.com/michalsnik/aos
 
 ![Screenshot](resources/img/animate-logo.png)
+
 
 ## Requirements
 
@@ -20,26 +21,63 @@ To install the plugin, follow these instructions.
 
         composer require swdevelopment/animate
 
-        .craft/
+
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for animate.
 
+  or
+
+        ./craft install/plugin animate
+
+
 ## Animate Overview
 
--Insert text here-
+Animate save you time by loading the files needed to run the Animate On Scroll library and allows you add animation elements in your templates.  
+
 
 ## Configuring Animate
 
--Insert text here-
+To start using Animate, just navigate to the Control Panel and click on the Animate plugin.
+
+1. To activate be sure to make sure you turn the Activate Animate lightswitch on.
+2. To use a CDN wiht the library, be sure to turn the Use CDN lightswitch on. It is good practice to use a CDN in production environments. If you are developing locally, there is no need to turn it on.
+
+
+![Screenshot](resources/img/animate-settings.png)
 
 ## Using Animate
 
--Insert text here-
+To use Animate inside of a template, simply add the **data-aos** tags to any element. Full usage of the library is completely up to you.
+
+- animations are used with the attribute **data-aos**  
+- settings can be overridden with the attribute **data-aos-***
+
+#### Animation Options ( Fade )
+| Animation Effect | Usage  |  
+|------|-----------------|
+|fade  | data-aos="fade" |
+|    fade-up  |         data-aos="fade-up"        |  
+|   fade-down   | data-aos="fade-down"                |
+|   fade-left   | data-aos="fade-left"                |
+|   fade-right   | data-aos="fade-down"                |
+|   fade-up-right   | data-aos="fade-up-right"                |
+|   fade-up-left   | data-aos="fade-up-left"                |
+|   fade-down-right   | data-aos="fade-down-right"                |   
+|   fade-down-left   | data-aos="fade-down-left"                |
+
+Example code of a "flip-up":
+
+    <div class="content" data-aos="flip-up">
+        <h1 data-aos="slide-right" data-aos-delay="200" data-aos-duration="400">Welcome</h1>
+    </div>
+
+For all animations, animation types and settings options, please refer to Animate's settings page.    
+
 
 ## Animate Roadmap
 
-Some things to do, and ideas for potential features:
+#### Future features:
+  - Add the ability to edit animation inside the CP on any field without adding any code to the template.
 
-* Release it
 
-Brought to you by [Tim Strawbridge](swdevteam.com)
+Brought to you by [Tim Strawbridge](https://swdevteam.com)

@@ -56,6 +56,54 @@ class Settings extends Model
 
     public $offset,$delay,$duration,$easing;
 
+    public $fades = [
+      array( 'effect' => 'fade', 'usage' => 'data-aos="fade"' ),
+      array( 'effect' => 'fade-up', 'usage' => 'data-aos="fade-up"' ),
+      array( 'effect' => 'fade-down', 'usage' => 'data-aos="fade-down"' ),
+      array( 'effect' => 'fade-left', 'usage' => 'data-aos="fade-left"' ),
+      array( 'effect' => 'fade-right', 'usage' => 'data-aos="fade-right"' ),
+      array( 'effect' => 'fade-up-right', 'usage' => 'data-aos="fade-up-right"' ),
+      array( 'effect' => 'fade-up-left', 'usage' => 'data-aos="fade-up-left"' ),
+      array( 'effect' => 'fade-down-right', 'usage' => 'data-aos="fade-down-right"' ),
+      array( 'effect' => 'fade-down-left', 'usage' => 'data-aos="fade-down-left"' ),
+
+
+    ];
+
+    public $flips = [
+      array( 'effect' => 'flip-up', 'usage' => 'data-aos="flip-up"' ),
+      array( 'effect' => 'flip-down', 'usage' => 'data-aos="flip-down"' ),
+      array( 'effect' => 'flip-left', 'usage' => 'data-aos="flip-left"' ),
+      array( 'effect' => 'flip-right', 'usage' => 'data-aos="flip-right"' ),
+    ];
+
+    public $slides = [
+
+      array( 'effect' => 'slide-up', 'usage' => 'data-aos="slide-up"' ),
+      array( 'effect' => 'slide-down', 'usage' => 'data-aos="slide-down"' ),
+      array( 'effect' => 'slide-left', 'usage' => 'data-aos="slide-left"' ),
+      array( 'effect' => 'slide-right', 'usage' => 'data-aos="slide-right"' ),
+
+    ];
+
+    public $zooms = [
+      array( 'effect' => 'zoom-in', 'usage' => 'data-aos="zoom-in"' ),
+      array( 'effect' => 'zoom-in-up', 'usage' => 'data-aos="zoom-in-up"' ),
+      array( 'effect' => 'zoom-in-down', 'usage' => 'data-aos="zoom-in-down"' ),
+      array( 'effect' => 'zoom-in-left', 'usage' => 'data-aos="zoom-in-left"' ),
+      array( 'effect' => 'zoom-in-right', 'usage' => 'data-aos="zoom-in-right"' ),
+      array( 'effect' => 'zoom-out', 'usage' => 'data-aos="zoom-out"' ),
+      array( 'effect' => 'zoom-out-up', 'usage' => 'data-aos="zoom-out-up"' ),
+      array( 'effect' => 'zoom-out-down', 'usage' => 'data-aos="zoom-out-down"' ),
+      array( 'effect' => 'zoom-out-left', 'usage' => 'data-aos="zoom-out-left"' ),
+      array( 'effect' => 'zoom-out-right', 'usage' => 'data-aos="zoom-out-right"' ),
+
+    ];
+
+    public $easings = [
+      array( 'effect' => 'linear', 'usage' => 'data-aos-easing="linear"' ),
+    ];
+
     public $animateOptions = [
       'fade','fade-up','fade-down','fade-left','fade-right','fade-up-right','fade-up-left','fade-down-right','fade-down-left',
       'flip-up','flip-down','flip-left','flip-right','slide-up','slide-down','slide-left','slide-right','zoom-in','zoom-in-up','zoom-in-down','zoom-in-left','zoom-in-right','zoom-out','zoom-out-up','zoom-out-down','zoom-out-left','zoom-out-right'
