@@ -8,15 +8,14 @@
  * @copyright Copyright (c) 2020 Tim Strawbridge
  */
 
-namespace swdevelopment\animate\assetbundles\animate;
+namespace swdevelopment\animate\web\assets\animatecpsection;
 
 use Craft;
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;
-use swdevelopment\animate\Animate;
 
 /**
- * AnimateAsset AssetBundle
+ * AnimateCPSectionAsset AssetBundle
  *
  * AssetBundle represents a collection of asset files, such as CSS, JS, images.
  *
@@ -33,7 +32,7 @@ use swdevelopment\animate\Animate;
  * @package   Animate
  * @since     1.0.0
  */
-class AnimateAsset extends AssetBundle
+class AnimateCPSectionAsset extends AssetBundle
 {
     // Public Methods
     // =========================================================================
@@ -44,7 +43,7 @@ class AnimateAsset extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = "@swdevelopment/animate/assetbundles/animate/dist";
+        $this->sourcePath = "@swdevelopment/animate/web/assets/animatecpsection/dist";
 
         // define the dependencies
         $this->depends = [
@@ -53,32 +52,13 @@ class AnimateAsset extends AssetBundle
 
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
+        $this->js = [
+            'js/Animate.js',
+        ];
 
-
-        // check if we are loading via CDN
-        if ( Animate::$plugin->useCDN ) {
-
-          $this->js = [
-            'https://unpkg.com/aos@2.3.1/dist/aos.js',
-            'js/default-aos.js'
-          ];
-
-          $this->css = [
-            'https://unpkg.com/aos@2.3.1/dist/aos.css',
-          ];
-
-        }else{
-
-          $this->js = [
-              'js/aos.js',
-              'js/default-aos.js'
-          ];
-
-          $this->css = [
-              'css/aos.css',
-          ];
-        }
-
+        $this->css = [
+            'css/Animate.css',
+        ];
 
         parent::init();
     }

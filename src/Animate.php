@@ -12,7 +12,7 @@ namespace swdevelopment\animate;
 
 use swdevelopment\animate\variables\AnimateVariable;
 use swdevelopment\animate\models\Settings;
-use swdevelopment\animate\assetbundles\animate\AnimateAsset;
+use swdevelopment\animate\web\assets\animate\AnimateAsset;
 
 use Yii;
 use yii\base\Event;
@@ -87,7 +87,7 @@ class Animate extends Plugin
     public $hasCpSection = false;
 
     public $versions = [
-        'animate' => '1.0.1'
+        'animate' => '1.0.2'
     ];
 
     public $useCDN = false;
@@ -202,7 +202,7 @@ class Animate extends Plugin
       // Get view
       $view = Craft::$app->getView();
       // Load current library versions
-      $this->loadAnimateVersion();
+      // $this->loadAnimateVersion();
 
       $settings = $this->getSettings();
       $this->useCDN = $this->settings->useCDN;
@@ -214,7 +214,9 @@ class Animate extends Plugin
         $this->useCDN = true;
       }
 
-      $view->registerAssetBundle(AnimateAsset::class);
+      // fixed bug where css would be ovewritten on page
+      $view->registerAssetBundle( AnimateAsset::class );
+
 
     }
 

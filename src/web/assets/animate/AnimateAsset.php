@@ -8,14 +8,15 @@
  * @copyright Copyright (c) 2020 Tim Strawbridge
  */
 
-namespace swdevelopment\animate\assetbundles\animatecpsection;
+namespace swdevelopment\animate\web\assets\animate;
 
 use Craft;
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;
+use swdevelopment\animate\Animate;
 
 /**
- * AnimateCPSectionAsset AssetBundle
+ * AnimateAsset AssetBundle
  *
  * AssetBundle represents a collection of asset files, such as CSS, JS, images.
  *
@@ -32,7 +33,7 @@ use craft\web\assets\cp\CpAsset;
  * @package   Animate
  * @since     1.0.0
  */
-class AnimateCPSectionAsset extends AssetBundle
+class AnimateAsset extends AssetBundle
 {
     // Public Methods
     // =========================================================================
@@ -43,22 +44,42 @@ class AnimateCPSectionAsset extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = "@swdevelopment/animate/assetbundles/animatecpsection/dist";
+        $this->sourcePath = "@swdevelopment/animate/web/assets/animate/dist";
 
         // define the dependencies
+        // fixed bug where css would be ovewritten on page
         $this->depends = [
-            CpAsset::class,
+            //CpAsset::class,                 // removed 09/13/2020 ~ TS
         ];
 
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
-        $this->js = [
-            'js/Animate.js',
-        ];
 
-        $this->css = [
-            'css/Animate.css',
-        ];
+
+        // check if we are loading via CDN
+        if ( Animate::$plugin->useCDN ) {
+
+          $this->js = [
+            'https://unpkg.com/aos@2.3.1/dist/aos.js',
+            'js/default-aos.js'
+          ];
+
+          $this->css = [
+            'https://unpkg.com/aos@2.3.1/dist/aos.css',
+          ];
+
+        }else{
+          // this will be a cpresource
+          $this->js = [
+              'js/aos.js',
+              'js/default-aos.js'
+          ];
+
+          $this->css = [
+              'css/aos.css',
+          ];
+        }
+
 
         parent::init();
     }
