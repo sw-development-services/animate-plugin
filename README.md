@@ -52,6 +52,14 @@ To use Animate inside of a template, simply add the **data-aos** tags to any ele
 - animations are used with the attribute **data-aos**  
 - settings can be overridden with the attribute **data-aos-***
 
+  - delay
+  - duration
+  - offset
+  - easing
+  - anchor
+  - anchor-placement
+  
+
 #### Animation Options ( Fade )
 | Animation Effect | Usage  |  
 |------|-----------------|
@@ -80,4 +88,4 @@ For all animations, animation types and settings options, please refer to Animat
   - Add the ability to edit animation inside the CP on any field without adding any code to the template.
 
 
-Brought to you by [Tim Strawbridge](https://swdevteam.com)
+Brought to you by [Tim Strawbridge](https://www.swdevteam.com?utm_source=github&utm_medium=website&utm_campaign=animate_plugin&utm_term=&utm_content=site_link)

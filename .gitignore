@@ -12,6 +12,9 @@
 /build/*
 /yarn-error.log
 
+/tests/*
+codeception.yml
+
 # MISC FILES
 .cache
 .DS_Store
@@ -30,3 +33,5 @@
 !.vscode/extensions.json
 config.codekit3
 prepros-6.config
+
+.gitignore
