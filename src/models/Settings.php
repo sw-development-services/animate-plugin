@@ -44,6 +44,7 @@ class Settings extends Model
     public $activateAnimate = false;
     public $useOnEveryElement = false;
     public $useCDN = false;
+
     public $defaultSettings = [
       'offset'=>120,
       'delay'=>0,
@@ -100,18 +101,33 @@ class Settings extends Model
 
     ];
 
-    public $easings = [
-      array( 'effect' => 'linear', 'usage' => 'data-aos-easing="linear"' ),
-    ];
-
     public $animateOptions = [
       'fade','fade-up','fade-down','fade-left','fade-right','fade-up-right','fade-up-left','fade-down-right','fade-down-left',
       'flip-up','flip-down','flip-left','flip-right','slide-up','slide-down','slide-left','slide-right','zoom-in','zoom-in-up','zoom-in-down','zoom-in-left','zoom-in-right','zoom-out','zoom-out-up','zoom-out-down','zoom-out-left','zoom-out-right'
     ];
 
-    public $easingOptions = [
-      '','linear','ease','ease-in','ease-out','ease-in-out','ease-in-back','ease-out-back','ease-in-out-back','ease-in-sine','ease-out-sine','ease-in-out-sine','ease-in-quad','ease-out-quad','ease-in-out-quad','ease-in-cubic','ease-out-cubic','ease-in-quart','ease-out-quart','ease-in-out-quart'
+    public $easingOpts = [
+      'linear',
+      'ease',
+      'ease-in',
+      'ease-out',
+      'ease-in-out',
+      'ease-in-back',
+      'ease-out-back',
+      'ease-in-out-back',
+      'ease-in-sine',
+      'ease-out-sine',
+      'ease-in-out-sine',
+      'ease-in-quad',
+      'ease-out-quad',
+      'ease-in-out-quad',
+      'ease-in-cubic',
+      'ease-out-cubic',
+      'ease-in-quart',
+      'ease-out-quart',
+      'ease-in-out-quart',
     ];
+
 
     public $useDefaultSettings = false;
 

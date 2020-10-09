@@ -30,15 +30,6 @@
       })
     }}
 
-    {#
-    {{ forms.lightswitchField({
-        name: 'useOnEveryElement',
-        label: 'Use Animate on every element?'|t('animate'),
-        instructions: 'If enabled, the Animate library will be visible to use on every element.'|t('animate'),
-        on: (settings.useOnEveryElement ?? true),
-    }) }}
-    #}
-
     {{ forms.lightswitchField({
         name: 'useCDN',
         label: 'Use CDN?'|t('animate'),
@@ -53,6 +44,15 @@
         instructions: 'If enabled, the Animate library load only the default settings.'|t('animate'),
         on: (settings.useDefaultSettings ?? true),
     }) }}
+
+    {#
+      <pre>
+        {{ dump(settings.defaultSettings) }}
+      </pre>
+
+    #}
+
+
 
     {% if settings.useDefaultSettings == false %}
 
@@ -98,12 +98,13 @@
           <div class="col-50 r">
 
             {{ forms.selectField({
+              id:'easing',
               name:'easing[match]',
               class:'',
               label:'Set Animates easing setting'|t('animate'),
               instructions:'Select a value that you want to use.'|t('animate'),
-              value: settings.defaultSettings.easing,
-              options: settings.easingOptions,
+              value: ( settings.easing.match ? settings.easing.match : settings.defaultSettings.easing ),
+              options: settings.easingOpts,
 
             }) }}
 
