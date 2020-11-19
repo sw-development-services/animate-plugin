@@ -45,14 +45,6 @@
         on: (settings.useDefaultSettings ?? true),
     }) }}
 
-    {#
-      <pre>
-        {{ dump(settings.defaultSettings) }}
-      </pre>
-
-    #}
-
-
 
     {% if settings.useDefaultSettings == false %}
 
@@ -96,7 +88,6 @@
           </div>
 
           <div class="col-50 r">
-
             {{ forms.selectField({
               id:'easing',
               name:'easing[match]',
@@ -107,7 +98,6 @@
               options: settings.easingOpts,
 
             }) }}
-
           </div>
 
         </div>

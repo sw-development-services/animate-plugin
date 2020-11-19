@@ -55,7 +55,8 @@ class Settings extends Model
       'anchorPlacement'=>'top-bottom'
     ];
 
-    public $offset,$delay,$duration,$easing;
+    public $offset,$delay,$duration;
+    public $easing = ['match' => 0];
 
     public $fades = [
       array( 'effect' => 'fade', 'usage' => 'data-aos="fade"' ),

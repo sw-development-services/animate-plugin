@@ -1,5 +1,13 @@
 # Animate Changelog
 
+## 1.0.7 - 2020-11-19
+### Fixed issue [#4]  
+https://github.com/sw-development-services/animate-plugin/issues/4
+
+
+## 1.0.6 - 2020-10-09
+- Removed version in composer.json file
+
 ## 1.0.5 - 2020-10-09
 - Updated changelog
 
