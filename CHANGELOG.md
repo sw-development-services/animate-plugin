@@ -1,6 +1,6 @@
 # Animate Changelog
 
-## 1.0.7 - 2020-11-19
+## 1.0.8 - 2020-11-19
 ### Fixed issue [#4]  
 https://github.com/sw-development-services/animate-plugin/issues/4
 
