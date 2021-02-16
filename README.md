@@ -40,7 +40,7 @@ Animate save you time by loading the files needed to run the Animate On Scroll l
 To start using Animate, just navigate to the Control Panel and click on the Animate plugin.
 
 1. To activate be sure to make sure you turn the Activate Animate lightswitch on.
-2. To use a CDN wiht the library, be sure to turn the Use CDN lightswitch on. It is good practice to use a CDN in production environments. If you are developing locally, there is no need to turn it on.
+2. To use a CDN with the library, be sure to turn the Use CDN lightswitch on. It is good practice to use a CDN in production environments. If you are developing locally, there is no need to turn it on.
 
 
 ![Screenshot](resources/img/animate-settings.png)
