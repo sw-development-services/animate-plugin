@@ -1,5 +1,10 @@
 # Animate Changelog
 
+## 1.0.9 - 2021-04-08
+
+- Fixed typo
+
+
 ## 1.0.8 - 2020-11-19
 ### Fixed issue [#4]  
 https://github.com/sw-development-services/animate-plugin/issues/4
