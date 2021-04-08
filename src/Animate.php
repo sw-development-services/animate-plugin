@@ -85,7 +85,7 @@ class Animate extends Plugin
     public $hasCpSection = false;
 
     public $versions = [
-        'animate' => '1.0.4'
+        'animate' => '1.0.9'
     ];
 
     public $useCDN = false;

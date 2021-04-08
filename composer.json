@@ -2,6 +2,7 @@
     "name": "swdevelopment/animate",
     "description": "This will animate HTML elements using the AOS library.",
     "type": "craft-plugin",
+    "version":"v1.0.9",
     "keywords": [
         "craft",
         "cms",
