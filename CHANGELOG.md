@@ -1,5 +1,9 @@
 # Animate Changelog
 
+## 2.0.3-beta - 22-06-02
+### Changed ###
+- removed composer.lock file from project.
+
 ## 2.0.2-beta - 22-06-02
 - updated Changelog with correct version info
 
