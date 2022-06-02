@@ -1,5 +1,9 @@
 # Animate Changelog
 
+## 2.0.0-beta - 22-06-02
+### Added ###
+- Added support for CraftCMS 4 
+
 ## 1.0.9 - 2021-04-08
 
 - Fixed typo
