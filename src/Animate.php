@@ -10,7 +10,7 @@
 
 namespace swdevelopment\animate;
 
-use swdevelopment\animate\variables\AnimateVariable;
+// use swdevelopment\animate\variables\AnimateVariable;
 use swdevelopment\animate\models\Settings;
 use swdevelopment\animate\web\assets\animate\AnimateAsset;
 
@@ -19,13 +19,11 @@ use yii\base\Event;
 
 use Craft;
 use craft\base\Plugin;
-use craft\services\Plugins;
-use craft\events\PluginEvent;
+//use craft\services\Plugins;
+//use craft\events\PluginEvent;
 use craft\events\TemplateEvent;
 use craft\web\View;
-use craft\web\UrlManager;
-use craft\web\twig\variables\CraftVariable;
-use craft\events\RegisterUrlRulesEvent;
+
 
 /**
  * Craft plugins are very much like little applications in and of themselves. We’ve made
@@ -44,6 +42,7 @@ use craft\events\RegisterUrlRulesEvent;
  * @property  Settings $settings
  * @method    Settings getSettings()
  */
+
 class Animate extends Plugin
 {
     // Static Properties
@@ -55,10 +54,10 @@ class Animate extends Plugin
      *
      * @var Animate
      */
-    public static $plugin;
+    public static Plugin $plugin;
 
     /** @var array $_lockRead Whether the composer.lock file been read already. */
-    protected $_lockRead = false;
+    protected bool $_lockRead = false;
 
     // Public Properties
     // =========================================================================
@@ -68,27 +67,27 @@ class Animate extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '2.0.0-beta';
 
     /**
      * Set to `true` if the plugin should have a settings view in the control panel.
      *
      * @var bool
      */
-    public $hasCpSettings = true;
+    public bool $hasCpSettings = true;
 
     /**
      * Set to `true` if the plugin should have its own section (main nav item) in the control panel.
      *
      * @var bool
      */
-    public $hasCpSection = false;
+    public bool $hasCpSection = false;
 
     public $versions = [
-        'animate' => '1.0.9'
+        'animate' => '2.0.0-beta'
     ];
 
-    public $useCDN = false;
+    public bool $useCDN = false;
 
     // Public Methods
     // =========================================================================
@@ -115,24 +114,6 @@ class Animate extends Plugin
 
         }
 
-        // Register our site routes
-        /*Event::on(
-            UrlManager::class,
-            UrlManager::EVENT_REGISTER_SITE_URL_RULES,
-            function (RegisterUrlRulesEvent $event) {
-                $event->rules['siteActionTrigger1'] = 'animate/default';
-            }
-        );
-
-        // Register our CP routes
-        Event::on(
-            UrlManager::class,
-            UrlManager::EVENT_REGISTER_CP_URL_RULES,
-            function (RegisterUrlRulesEvent $event) {
-                $event->rules['cpActionTrigger1'] = 'animate/default/do-something';
-            }
-        ); */
-
         if ($this->getSettings()->activateAnimate) {
             Event::on(
                 View::class,
@@ -142,28 +123,6 @@ class Animate extends Plugin
                 }
             );
         }
-
-        // Register our variables
-        /*Event::on(
-            CraftVariable::class,
-            CraftVariable::EVENT_INIT,
-            function (Event $event) {
-                /** @var CraftVariable $variable */
-                //$variable = $event->sender;
-                //$variable->set('animate', AnimateVariable::class);
-            //}
-        //); */
-
-        // Do something after we're installed
-        /*Event::on(
-            Plugins::class,
-            Plugins::EVENT_AFTER_INSTALL_PLUGIN,
-            function (PluginEvent $event) {
-                if ($event->plugin === $this) {
-                    // We were just installed
-                }
-            }
-        );*/
 
 
 
@@ -271,7 +230,7 @@ class Animate extends Plugin
      *
      * @return \craft\base\Model|null
      */
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?craft\base\Model
     {
         return new Settings();
     }
@@ -282,7 +241,7 @@ class Animate extends Plugin
      *
      * @return string The rendered settings HTML
      */
-    protected function settingsHtml(): string
+    protected function settingsHtml(): ?string
     {
         return Craft::$app->view->renderTemplate(
             'animate/settings',

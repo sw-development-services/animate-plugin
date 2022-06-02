@@ -41,9 +41,9 @@ class Settings extends Model
      */
 
     // public $animateToolbar = true;
-    public $activateAnimate = false;
-    public $useOnEveryElement = false;
-    public $useCDN = false;
+    public bool $activateAnimate = false;
+    public bool $useOnEveryElement = false;
+    public bool $useCDN = false;
 
     public $defaultSettings = [
       'offset'=>120,
@@ -130,7 +130,7 @@ class Settings extends Model
     ];
 
 
-    public $useDefaultSettings = false;
+    public bool $useDefaultSettings = false;
 
     // Public Methods
     // =========================================================================
@@ -145,7 +145,7 @@ class Settings extends Model
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             //['someAttribute', 'string'],

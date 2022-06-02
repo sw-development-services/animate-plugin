@@ -1,4 +1,4 @@
-# Animate plugin for Craft CMS 3.x
+# Animate plugin for Craft CMS 3.x | 4.x
 
 This will animate elements using AOS from https://github.com/michalsnik/aos
 
@@ -27,7 +27,7 @@ To install the plugin, follow these instructions.
 
   or
 
-        ./craft install/plugin animate
+        ./craft plugin/install animate
 
 
 ## Animate Overview

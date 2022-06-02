@@ -1,4 +1,6 @@
 # Animate Changelog
+## 2.0.1-beta - 22-06-02
+- updated Readme
 
 ## 2.0.0-beta - 22-06-02
 ### Added ###
