@@ -27,8 +27,8 @@
         "craftcms/cms": "^3.0|^4.0"
     },
     "require-dev": {
-      "craftcms/cms": "^3.2.0",
-      "codeception/codeception": "^3.0",
+        "craftcms/cms": "^3.0|^4.0",
+      "codeception/codeception": "^4.0",
       "vlucas/phpdotenv": "^3.0"
     },
     "autoload": {
@@ -44,5 +44,11 @@
         "documentationUrl": "https://github.com/sw-development-services/animate-plugin/blob/master/README.md",
         "changelogUrl": "https://github.com/sw-development-services/animate-plugin/master/CHANGELOG.md",
         "class": "swdevelopment\\animate\\Animate"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }
