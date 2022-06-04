@@ -1,5 +1,9 @@
 # Animate Changelog
 
+## 2.0.5-beta - 22-06-04
+### Fixed ###
+- fixed bug causing install to fail
+
 ## 2.0.4-beta - 22-06-03
 ### Changed ###
 - removed version from composer.json
