@@ -1,5 +1,9 @@
 # Animate Changelog
 
+## 2.0.6-beta - 22-06-07
+### Changed ###
+- updated readme with new roadmap
+
 ## 2.0.5-beta - 22-06-04
 ### Fixed ###
 - fixed bug causing install to fail
@@ -8,17 +12,17 @@
 ### Changed ###
 - removed version from composer.json
 
-## 2.0.3-beta - 22-06-02
+## 2.0.3-beta - 2022-06-02
 ### Changed ###
 - removed composer.lock file from project.
 
-## 2.0.2-beta - 22-06-02
+## 2.0.2-beta - 2022-06-02
 - updated Changelog with correct version info
 
-## 2.0.1-beta - 22-06-02
+## 2.0.1-beta - 2022-06-02
 - updated Readme
 
-## 2.0.0-beta - 22-06-02
+## 2.0.0-beta - 2022-06-02
 ### Added ###
 - Added support for CraftCMS 4 
 

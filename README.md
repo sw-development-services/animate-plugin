@@ -85,7 +85,7 @@ For all animations, animation types and settings options, please refer to Animat
 ## Animate Roadmap
 
 #### Future features:
-  - Add the ability to edit animation inside the CP on any field without adding any code to the template.
+  - Add the ability to edit animation inside the CP on any field.
 
 
 Brought to you by [Tim Strawbridge](https://www.swdevteam.com?utm_source=github&utm_medium=website&utm_campaign=animate_plugin&utm_term=&utm_content=site_link)
