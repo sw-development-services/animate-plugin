@@ -1,14 +1,14 @@
 # Animate Changelog
 
-## 2.0.6-beta - 22-06-07
+## 2.0.6-beta - 2022-06-07
 ### Changed ###
 - updated readme with new roadmap
 
-## 2.0.5-beta - 22-06-04
+## 2.0.5-beta - 2022-06-04
 ### Fixed ###
 - fixed bug causing install to fail
 
-## 2.0.4-beta - 22-06-03
+## 2.0.4-beta - 2022-06-03
 ### Changed ###
 - removed version from composer.json
 
