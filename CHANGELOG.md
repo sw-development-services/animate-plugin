@@ -1,6 +1,11 @@
 # Animate Changelog
+## 4.0.0 - 2023-08-23
+### Changed ###
+- Fixed path for Changelog
+- Changed versioning to align with Craft CMS major release versions 
 
-## 2.0.6-beta - 2022-06-07
+
+## 2.0.6-beta - 22-06-07
 ### Changed ###
 - updated readme with new roadmap
 

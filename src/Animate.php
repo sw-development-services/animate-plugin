@@ -67,7 +67,7 @@ class Animate extends Plugin
      *
      * @var string
      */
-    public string $schemaVersion = '2.0.0-beta';
+    public string $schemaVersion = '4.0.0';
 
     /**
      * Set to `true` if the plugin should have a settings view in the control panel.
@@ -84,7 +84,7 @@ class Animate extends Plugin
     public bool $hasCpSection = false;
 
     public $versions = [
-        'animate' => '2.0.0-beta'
+        'animate' => '4.0.0'
     ];
 
     public bool $useCDN = false;
