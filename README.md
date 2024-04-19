@@ -1,4 +1,4 @@
-# Animate plugin for Craft CMS 3.x | 4.x
+# Animate plugin for Craft CMS 3.x | 4.x | 5.x
 
 This will animate elements using AOS from https://github.com/michalsnik/aos
 

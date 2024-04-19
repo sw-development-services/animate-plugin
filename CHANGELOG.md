@@ -1,5 +1,9 @@
 # Animate Changelog
 
+## 5.0.0 - 2024-04-19
+### Changed
+- Updated Animate to be compatible with Craft CMS 5.0
+
 ## 4.0.0 - 2023-08-23
 ### Changed
 - Fixed path for Changelog
