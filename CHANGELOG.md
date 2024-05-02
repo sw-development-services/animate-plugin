@@ -1,5 +1,9 @@
 # Animate Changelog
 
+## 5.0.1 - 2024-05-02
+### Changed
+- Changed CDN setting to not be boolean true while in production 
+
 ## 5.0.0 - 2024-04-19
 ### Changed
 - Updated Animate to be compatible with Craft CMS 5.0
