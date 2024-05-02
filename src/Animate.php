@@ -167,9 +167,9 @@ class Animate extends Plugin
       $environment = Craft::$app->getConfig()->env;
 
       // if we are in production, lets load only from the CDN
-      if($environment == "production"){
-        $this->useCDN = true;
-      }
+      //if($environment == "production"){
+      //  $this->useCDN = true;
+      //}
 
       // fixed bug where css would be ovewritten on page
       $view->registerAssetBundle( AnimateAsset::class );
@@ -215,8 +215,6 @@ class Animate extends Plugin
 
         }
       }
-
-      // print_r( $this->versions[$name] );
 
     }
 
